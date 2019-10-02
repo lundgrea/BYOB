@@ -1,4 +1,4 @@
-export const licenses = [
+const licenseData = [
   {
   licensee_name: "BREWER'S STAR DISTRIBUTORS LLC",
   doing_business_as: "BREWER'S STAR DISTRIBUTORS LLC",
@@ -656,3 +656,5 @@ export const licenses = [
     ]
   }
 ]
+
+module.exports = licenseData;
