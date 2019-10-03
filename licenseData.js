@@ -1,4 +1,4 @@
-export const licenses = [
+const licenseData = [
   {
   licensee_name: "BREWER'S STAR DISTRIBUTORS LLC",
   doing_business_as: "BREWER'S STAR DISTRIBUTORS LLC",
@@ -9,7 +9,7 @@ export const licenses = [
   city: "Boulder",
   state: "CO",
   zip: "80301",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-09-15",
     pass: true,
@@ -32,7 +32,7 @@ export const licenses = [
   city: "Antonito",
   state: "CO",
   zip: "81120",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-08-18",
     pass: true,
@@ -60,7 +60,7 @@ export const licenses = [
   city: "Denver",
   state: "CO",
   zip: "80216",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-10-12",
     pass: true,
@@ -83,7 +83,7 @@ export const licenses = [
   city: "Granby",
   state: "CO",
   zip: "80446",
-  compliance_checks: [
+  complianceChecks: [
     {
       date: "2019-09-12",
       pass: true,
@@ -101,7 +101,7 @@ export const licenses = [
   city: "Telluride",
   state: "CO",
   zip: "81435",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-09-14",
     pass: true,
@@ -124,7 +124,7 @@ export const licenses = [
   city: "Snowmass Village",
   state: "CO",
   zip: "81615",
-  complaince_checks: []
+  complianceChecks: []
   },
   {
   licensee_name: "SBCC TENNYSON LLC",
@@ -136,7 +136,7 @@ export const licenses = [
   city: "Denver",
   state: "CO",
   zip: "80212",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-10-12",
     pass: true,
@@ -159,7 +159,7 @@ export const licenses = [
   city: "Denver",
   state: "CO",
   zip: "80205",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-09-12",
     pass: false,
@@ -187,7 +187,7 @@ export const licenses = [
   city: "Centennial",
   state: "CO",
   zip: "80015",
-  compliance_checks: []
+  complianceChecks: []
   },
   {
   licensee_name: "R&J, LLC",
@@ -199,7 +199,7 @@ export const licenses = [
   city: "Aurora",
   state: "CO",
   zip: "80010",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-09-28",
     pass: false,
@@ -222,7 +222,7 @@ export const licenses = [
   city: "Denver",
   state: "CO",
   zip: "80205",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-10-15",
     pass: true,
@@ -245,7 +245,7 @@ export const licenses = [
   city: "Castle Pines",
   state: "CO",
   zip: "80108",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-08-30",
     pass: true,
@@ -263,7 +263,7 @@ export const licenses = [
   city: "Boulder",
   state: "CO",
   zip: "80305",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-11-16",
     pass: false,
@@ -291,7 +291,7 @@ export const licenses = [
   city: "Centennial",
   state: "CO",
   zip: "80122",
-  compliance_checks: [
+  complianceChecks: [
     {
       date: "2019-08-20",
       pass: true,
@@ -314,7 +314,7 @@ export const licenses = [
   city: "Greenwood Village",
   state: "CO",
   zip: "80121",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-08-20",
     pass: false,
@@ -332,7 +332,7 @@ export const licenses = [
   city: "Lakewood",
   state: "CO",
   zip: "80214",
-  compliance_checks: [
+  complianceChecks: [
     {
       date: "2019-10-17",
       pass: true,
@@ -355,7 +355,7 @@ export const licenses = [
   city: "Colorado Springs",
   state: "CO",
   zip: "80907",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-08-18",
     pass: true,
@@ -378,7 +378,7 @@ export const licenses = [
   city: "Denver",
   state: "CO",
   zip: "80231",
-  compliance_checks: []
+  complianceChecks: []
   },
   {
   licensee_name: "CP LOVELAND LLC",
@@ -390,7 +390,7 @@ export const licenses = [
   city: "Loveland",
   state: "CO",
   zip: "80538",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-00-02",
     pass: true,
@@ -413,7 +413,7 @@ export const licenses = [
   city: "Longmont",
   state: "CO",
   zip: "80503",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-08-28",
     pass: false,
@@ -441,7 +441,7 @@ export const licenses = [
   city: "Arvada",
   state: "CO",
   zip: "80002",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-10-02",
     pass: true,
@@ -459,7 +459,7 @@ export const licenses = [
   city: "Pueblo",
   state: "CO",
   zip: "81006",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-09-19",
     pass: true,
@@ -482,7 +482,7 @@ export const licenses = [
   city: "Castle Rock",
   state: "CO",
   zip: "80108",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-10-22",
     pass: true,
@@ -500,7 +500,7 @@ export const licenses = [
   city: "Parker",
   state: "CO",
   zip: "80134",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-08-10",
     pass: false,
@@ -528,7 +528,7 @@ export const licenses = [
   city: "Calhan",
   state: "CO",
   zip: "80808",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-09-29",
     pass: true,
@@ -551,7 +551,7 @@ export const licenses = [
   city: "Englewood",
   state: "CO",
   zip: "80113",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-08-18",
     pass: false,
@@ -584,7 +584,7 @@ export const licenses = [
   city: "Denver",
   state: "CO",
   zip: "80207",
-  complaince_checks: []
+  complianceChecks: []
   },
   {
   licensee_name: "THE MOLECULE EFFECT LLC",
@@ -596,7 +596,7 @@ export const licenses = [
   city: "Denver",
   state: "CO",
   zip: "80209",
-  compliance_checks: [
+  complianceChecks: [
     {
       date: "2019-09-20",
       pass: false,
@@ -619,7 +619,7 @@ export const licenses = [
   city: "Estes Park",
   state: "CO",
   zip: "80517",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-08-30",
     pass: true,
@@ -637,7 +637,7 @@ export const licenses = [
   city: "Denver",
   state: "CO",
   zip: "80209",
-  compliance_checks: [
+  complianceChecks: [
     {
     date: "2019-08-30",
     pass: true,
@@ -656,3 +656,5 @@ export const licenses = [
     ]
   }
 ]
+
+module.exports = licenseData
