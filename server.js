@@ -16,3 +16,13 @@ app.get('/', (request, response) => {
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}.`);
 });
+
+app.get('/api/v1/licenses', (request, response) => {
+  database('licenses').select()
+    .then((licenses) => {
+      response.status(200).json(licenses);
+    })
+    .catch((error) => {
+      response.status(500).json({ error });
+    });
+});
