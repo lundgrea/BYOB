@@ -36,3 +36,19 @@ app.get('/api/v1/checks', (request, response) => {
       response.status(500).json({ error });
     });
 });
+
+app.get('/api/v1/licenses/:id', (request, response) => {
+  database('licenses').where('id', request.params.id).select()
+    .then(licenses => {
+      if (licenses.length) {
+        response.status(200).json(licenses);
+      } else {
+        response.status(404).json({ 
+          error: `Could not find license with id ${request.params.id}`
+        });
+      }
+    })
+    .catch(error => {
+      response.status(500).json({ error });
+    });
+});
