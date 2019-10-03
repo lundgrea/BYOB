@@ -26,3 +26,13 @@ app.get('/api/v1/licenses', (request, response) => {
       response.status(500).json({ error });
     });
 });
+
+app.get('/api/v1/checks', (request, response) => {
+  database('checks').select()
+    .then((checks) => {
+      response.status(200).json(checks);
+    })
+    .catch((error) => {
+      response.status(500).json({ error });
+    });
+});
