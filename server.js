@@ -91,4 +91,22 @@ app.post('/api/v1/licenses', (request, response) => {
     });
 });
 
+app.post('/api/v1/checks', (request, response) => {
+  const check = request.body;
 
+  for (let requiredParameter of ['date', 'pass', 'agency']) {
+    if (!check[requiredParameter]) {
+      return response
+        .status(422)
+        .send({ error: `Expected format: { date: <String>, pass: <Boolean>, agency: <String> }. You're missing a "${requiredParameter}" property.` });
+    }
+  }
+
+  database('checks').insert(check, 'id')
+    .then(check => {
+      response.status(201).json({ id: check[0] })
+    })
+    .catch(error => {
+      response.status(500).json({ error });
+    });
+});
