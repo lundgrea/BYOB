@@ -8,6 +8,7 @@ const database = require('knex')(configuration);
 
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'BYOB';
+app.use(express.json());
 
 app.get('/', (request, response) => {
   response.send('Oh hey there, BYOB');
@@ -68,3 +69,26 @@ app.get('/api/v1/checks/:id', (request, response) => {
       response.status(500).json({ error });
     });
 });
+
+
+app.post('/api/v1/licenses', (request, response) => {
+  const license = request.body;
+
+  for (let requiredParameter of ['licensee_name', 'doing_business_as', 'license_type', 'issue_date', 'license_number', 'street_address', 'city', 'state', 'zip']) {
+    if (!license[requiredParameter]) {
+      return response
+        .status(422)
+        .send({error:`Expected format: { licensee_name: <String>, doing_business_as: <String>, license_type: <String>, issue_date: <String>, license_number: <String>, street_address: <String>, city: <String>, state: <String>, zip: <String>}. You are missing a "${requiredParameter}" property.`})
+    }
+  }
+
+  database('licenses').insert(license, 'id')
+    .then(license => {
+      response.status(201).json({ id: license[0] })
+    })
+    .catch(error => {
+      response.status(500).json({ error });
+    });
+});
+
+
