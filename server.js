@@ -52,3 +52,19 @@ app.get('/api/v1/licenses/:id', (request, response) => {
       response.status(500).json({ error });
     });
 });
+
+app.get('/api/v1/checks/:id', (request, response) => {
+  database('checks').where('id', request.params.id).select()
+    .then(checks => {
+      if (checks.length) {
+        response.status(200).json(checks);
+      } else {
+        response.status(404).json({ 
+          error: `Could not find a compliance check with id ${request.params.id}`
+        });
+      }
+    })
+    .catch(error => {
+      response.status(500).json({ error });
+    });
+});
