@@ -17,20 +17,20 @@ Build Your Own Backend
 
 Sample Response:
 {
-    "id": 161
+"id": 161
 }
 
 
 ## Format to Post to Checks:
 
 {
-	"date": "2019-10-10",
-	"pass": "false",
-	"agency": "DPD",
-	"license_id": "161"
+"date": "2019-10-10",
+"pass": "false",
+"agency": "DPD",
+"license_id": "161"
 }
 
 Sample Response: 
 {
-    "id": 55
+"id": 55
 }
