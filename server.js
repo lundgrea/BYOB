@@ -117,9 +117,10 @@ app.delete('/api/v1/checks/:id', (request, response) => {
     .catch(error => response.status(500).json({error}))
 })
 
-// app.delete('/api/v1/licenses/:id', (request, response) => {
-//   const deletePromises = database('checks').where('id', request.params.id).del()
-//     .then((check) => response.status(201).json( `Compliance check with ID ${request.params.id} has been deleted`))
-//     .catch(error => response.status(500).json({error}))
-// })
+app.delete('/api/v1/licenses/:id', (request, response) => {
+  const deletePromises = [database('checks').where('license_id', request.params.id).del(), database('licenses').where('id', request.params.id).del()]
+  Promise.all(deletePromises)
+   .then((check) => response.status(201).json( `Liquor License and all associated compliance checks with Primary License ID ${request.params.id} has been deleted`))
+   .catch(error => response.status(500).json({error}))
+})
 

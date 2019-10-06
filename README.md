@@ -226,8 +226,7 @@ Sample Response:
 <br>
 
 
-
-<!-- ##### DELETE REQUESTS
+##### DELETE REQUESTS
 
 <br>
 To delete a liquor license:
@@ -236,7 +235,7 @@ To delete a liquor license:
 DELETE /api/licenses/:license_id
 ```
 
-It will return a message as JSON about the success of the deletion. -->
+It will return a message as JSON about the success of the deletion.
 
 
 ## Compliance Checks
