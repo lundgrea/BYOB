@@ -22,7 +22,7 @@ This project is an introduction to backend development. The one-to-many Postgres
 ---
 
 ### Database and Schema
-![screenshot](NEED)
+![screenshot](https://user-images.githubusercontent.com/38546045/66278741-9f32eb00-e89b-11e9-9771-cb5c0d3a7a60.png)
 The database is a PostgreSQL database, made up of two tables.
 <br>
 
