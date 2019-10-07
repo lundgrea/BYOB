@@ -10,6 +10,9 @@ Overview:
 This project is an introduction to backend development. The one-to-many PostgresSQL database schema was migrated and seeded using Knex, alongside an Express server with fetch calls to the Node.js API endpoints.
 
 ---
+### Project Tracker
+
+[GitHub Project](https://github.com/lundgrea/BYOB/projects/1)
 
 ### Table Of Contents
 - [Database and Schema](#database-and-schema)
